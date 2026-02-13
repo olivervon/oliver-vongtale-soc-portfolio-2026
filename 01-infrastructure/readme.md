@@ -1,4 +1,4 @@
-# Infrastructure Deployment – SOC Lab
+# Infrastructure Deployment
 
 ## Objective
 
