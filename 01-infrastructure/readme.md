@@ -109,7 +109,7 @@ Windows Server 2016 (default configuration)
 
 The server automatically rebooted after promotion.
 
-dc01 now functions as:
+DC01 now functions as:
 
 - Domain Controller
 - DNS Server
