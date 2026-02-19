@@ -200,3 +200,44 @@ This system will later be used for:
 ### Domain Login Verification
 
 ![srv01 domain login](screenshots/19-srv01-domain-login.PNG)
+
+## Windows Client Deployment - WIN10
+
+A Windows client was deployed to simulate a domain-joined workstation.
+
+Configuration:
+
+- Hostname: WIN10
+- IP address: 192.168.100.30
+- DNS server: 192.168.100.10
+- Domain: soclab.local
+
+The client was successfully joined to the domain and authentication was verified using a standard domain user account.
+
+This system will be used for:
+
+- Brute force simulation
+- Authentication log generation
+- Credential testing scenarios
+
+## Evidence
+
+### WIN10 VM Created
+
+![win10 vm created](screenshots/20-win10-vm-created.PNG)
+
+### WIN10 Static IP Configuration
+
+![win10 static ip](screenshots/21-win10-static-ip.PNG)
+
+### WIN10 Hostname Configuration
+
+![win10 hostname](screenshots/22-win10-hostname.PNG)
+
+### Domain Join Confirmation
+
+![win10 domain joined](screenshots/23-win10-domain-joined.PNG)
+
+### Domain Login Verification
+
+![win10 domain login](screenshots/24-win10-domain-login.PNG)
