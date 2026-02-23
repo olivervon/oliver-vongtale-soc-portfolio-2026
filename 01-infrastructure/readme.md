@@ -99,13 +99,9 @@ The Active Directory Domain Services role was installed on dc01.
 
 The server was promoted to Domain Controller by creating a new forest.
 
-Domain name:
+- Domain name: soclab.local
 
-soclab.local
-
-Forest functional level:
-
-Windows Server 2016 (default configuration)
+- Forest functional level: Windows Server 2016 (default configuration)
 
 The server automatically rebooted after promotion.
 
