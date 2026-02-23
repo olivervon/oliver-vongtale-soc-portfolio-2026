@@ -53,3 +53,22 @@ This behavior represents a typical password spraying attack pattern.
 ### Evidence
 
 ![smb bruteforce 4625](screenshots/04-smb-bruteforce-4625.PNG)
+
+## Credential Compromise - Successful SMB Authentication
+
+After multiple failed authentication attempts (Event ID 4625), a successful login event was generated from the attacker node.
+
+The attacker successfully authenticated using a password contained in the password list.
+
+- Event ID: 4624
+- Logon Type: 3 (Network)
+- Account Name: johjoh
+- Source IP: 192.168.100.50
+
+This represents a successful credential compromise following a brute force / password spraying attack.
+
+The event sequence demonstrates the transition from repeated authentication failures to a valid account compromise.
+
+### Evidence
+
+![credential success](screenshots/05-credential-success.PNG)
