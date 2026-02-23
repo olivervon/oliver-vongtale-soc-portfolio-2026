@@ -72,3 +72,9 @@ The event sequence demonstrates the transition from repeated authentication fail
 ### Evidence
 
 ![credential success](screenshots/05-credential-success.PNG)
+
+## Detection Considerations
+
+The sequence of multiple 4625 events followed by a 4624 from the same source IP within a short time window is a strong indicator of successful brute force activity.
+
+This pattern should trigger alerting logic in SIEM solutions such as Microsoft Sentinel.
