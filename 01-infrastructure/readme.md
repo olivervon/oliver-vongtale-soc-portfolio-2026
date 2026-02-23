@@ -13,11 +13,11 @@ DC01 will function as:
 
 ## Virtual Machine Configuration - DC01
 
-Name: DC01  
-Generation: 2  
-Startup Memory: 4096 MB (Dynamic Memory Disabled)  
-Virtual Disk: 60 GB  
-Network: SOC-LAB-NET  
+- Name: DC01
+- Generation: 2
+- Startup Memory: 4096 MB (Dynamic Memory Disabled)
+- Virtual Disk: 60 GB
+- Network: SOC-LAB-NET
 
 ## Evidence
 
