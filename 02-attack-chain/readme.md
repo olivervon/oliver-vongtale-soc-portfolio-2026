@@ -138,7 +138,7 @@ Security Event Observed:
 - Parent Process: powershell.exe  
 - Technique: LSASS Memory Dump  
 
-MITRE ATT&CK Mapping:
+MITRE ATT&CK Mapping:  
 T1003.001 - OS Credential Dumping: LSASS Memory
 
 ### Evidence
