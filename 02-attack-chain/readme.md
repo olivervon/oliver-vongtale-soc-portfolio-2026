@@ -120,3 +120,43 @@ Administrative privileges are required to access LSASS memory for credential dum
 ### Evidence
 
 ![privilege escalation](screenshots/07-privilege-escalation.PNG)
+
+## Credential Dumping - LSASS Memory Dump
+
+With local administrator privileges, LSASS memory was dumped using a native Windows technique.
+
+Command used:
+
+rundll32.exe C:\Windows\System32\comsvcs.dll, MiniDump <PID> C:\Windows\Temp\lsass2.dmp full
+
+This simulates credential dumping behavior using built-in Windows binaries.
+
+Security Event Observed:
+
+- Event ID: 4688  
+- Process Name: rundll32.exe  
+- Parent Process: powershell.exe  
+- Technique: LSASS Memory Dump  
+
+MITRE ATT&CK Mapping:
+T1003.001 - OS Credential Dumping: LSASS Memory
+
+### Evidence
+
+![lsass dump 4688](screenshots/08-lsass-dump-4688.PNG)
+
+### Detection Considerations
+
+Execution of rundll32.exe with comsvcs.dll and MiniDump parameters targeting LSASS is a high-confidence indicator of credential dumping activity.
+
+This behavior should trigger high-severity alerts in endpoint detection and SIEM solutions.
+
+## Attack Chain Summary
+
+1. Initial Access - SMB Brute Force (4625)
+2. Credential Access - Successful Authentication (4624)
+3. Lateral Movement - Authentication to SRV01 (4624)
+4. Privilege Escalation - Local Administrator Access
+5. Credential Dumping - LSASS Memory Dump (4688)
+
+This lab demonstrates a complete on-prem attack chain from initial access to credential extraction.
