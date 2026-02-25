@@ -57,3 +57,17 @@ This enables cloud-based detection of authentication activity and credential dum
 ![dcr security log](screenshots/02-dcr-security-log.PNG)
 
 ![dcr resource association](screenshots/03-dcr-resource-association.PNG)
+
+## Security Log Verification
+
+Windows Security logs are successfully ingested via Azure Monitor Agent.
+
+Security events are stored in the **Event** table.
+
+Verified Event IDs:
+- 4625 Failed logon
+- 4624 Successful logon
+
+### Evidence
+
+![4625 visible](screenshots/07-4625-visible.PNG)
