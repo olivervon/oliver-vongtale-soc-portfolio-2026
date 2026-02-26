@@ -155,3 +155,10 @@ used to maintain system access after initial compromise.
 
 In a production SOC environment, this activity would require
 further host investigation and credential validation.
+
+## Lab Completion
+
+The investigation phase concludes the simulated attack lifecycle,
+demonstrating detection and analysis across a hybrid SOC environment.
+
+[Back to Portfolio Overview](../readme.md)
