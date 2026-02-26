@@ -6,6 +6,19 @@ The lab was designed to simulate realistic attacker activity and demonstrate how
 
 The project follows a structured SOC workflow from initial compromise to incident investigation.
 
+## Repository Navigation
+
+- Lab Environment
+- Environment Architecture
+- Repository Structure
+  - 01 - Lab Setup
+  - 02 - Attack Chain Simulation
+  - 03 - Cloud Integration
+  - 04 - Incident Investigation
+- Skills Demonstrated
+- Detection Focus
+- Project Objective
+
 ## Lab Environment
 
 The environment consists of a multi-system virtualized network simulating both attacker and enterprise infrastructure.
