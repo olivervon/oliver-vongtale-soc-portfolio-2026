@@ -102,3 +102,18 @@ Process creation logs confirmed suspicious PowerShell execution
 associated with the scheduled task activity.
 
 ![Event ID 4688 - PowerShell Execution](screenshots/05-event-4688-powershell.PNG)
+
+### Step 3 - User Authentication Validation
+
+Authentication logs were reviewed to validate the user context
+responsible for the observed activity.
+
+Event ID 4624 confirmed successful user logon associated with
+the scheduled task creation and execution events.
+
+## Evidence
+
+Security logs confirmed authenticated user activity prior to
+persistence establishment.
+
+![Event ID 4624 - Successful Logon](screenshots/06-event-4624-logon.PNG)
