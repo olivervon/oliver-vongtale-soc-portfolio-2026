@@ -117,3 +117,41 @@ Security logs confirmed authenticated user activity prior to
 persistence establishment.
 
 ![Event ID 4624 - Successful Logon](screenshots/06-event-4624-logon.PNG)
+
+## Attack Timeline
+
+| Time | Activity |
+|------|-----------|
+| User Logon | Successful authentication detected (Event ID 4624) |
+| Task Creation | Scheduled task WindowsUpdateCheck created (Event ID 4698) |
+| Process Execution | schtasks.exe executed with embedded PowerShell command (Event ID 4688) |
+
+## MITRE ATT&CK Mapping
+
+T1053.005 – Scheduled Task (Persistence)  
+T1059.001 – PowerShell (Execution)
+
+## Detection Considerations
+
+Security monitoring solutions should generate alerts when
+new scheduled tasks are created unexpectedly on systems.
+
+Execution of schtasks.exe containing embedded PowerShell
+commands represents a strong indicator of persistence activity.
+
+Correlation between scheduled task creation and suspicious
+process execution significantly improves detection capability.
+
+## Analyst Conclusion
+
+The investigation identified a scheduled task configured to
+execute PowerShell using hidden execution parameters.
+
+Analysis of Windows Security logs confirmed persistence
+activity associated with authenticated user actions on SRV01.
+
+The observed behavior aligns with common attacker techniques
+used to maintain system access after initial compromise.
+
+In a production SOC environment, this activity would require
+further host investigation and credential validation.
