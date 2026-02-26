@@ -79,3 +79,15 @@ Microsoft Sentinel is accessed through the Microsoft Defender portal as part of 
 ### Evidence
 
 ![defender portal sentinel](screenshots/05-defender-portal-sentinel.PNG)
+
+## Detection Capability Status
+
+Windows Security events from the on-premise environment are successfully ingested into Microsoft Sentinel through Azure Arc and Azure Monitor Agent.
+
+Authentication events including failed logons (Event ID 4625) are visible within the SIEM platform.
+
+Due to ongoing Microsoft Sentinel migration to the Defender portal, analytics rule creation was not finalized within this lab phase.
+
+However, the environment is fully prepared for detection engineering and incident creation.
+
+The primary objective of validating hybrid log ingestion and visibility was successfully achieved.
