@@ -1,88 +1,81 @@
 # SOC Analyst Portfolio - Hybrid Active Directory Detection Lab
 
-This repository documents a hands-on SOC analyst learning environment focused on attack simulation, detection engineering, and incident investigation within a hybrid Active Directory infrastructure.
+This repository documents a hands-on SOC analyst lab focused on attack simulation, detection engineering, and incident investigation within a hybrid Active Directory environment.
 
-The lab environment was built to simulate realistic attacker behavior and demonstrate how security events can be detected, analyzed, and investigated using Windows Security logs and Microsoft Sentinel.
+The lab was designed to simulate realistic attacker activity and demonstrate how security events can be detected and investigated using Windows Security logs and Microsoft Sentinel.
 
 The project follows a structured SOC workflow from initial compromise to incident investigation.
 
-## Lab Overview
+## Lab Environment
 
-The environment consists of an on-premise Active Directory lab integrated with Azure monitoring capabilities.
+The environment consists of a multi-system virtualized network simulating both attacker and enterprise infrastructure.
 
-Core components:
+### On-Prem Infrastructure
 
-- Active Directory Domain Environment
-- Windows Server infrastructure
-- Attack simulation and adversary techniques
-- Windows Security log analysis
-- Hybrid cloud log ingestion
-- Microsoft Sentinel integration
-- SOC-style incident investigation
+- DC01 – Active Directory Domain Controller
+- SRV01 – Member Server and investigation target
+- WIN10 – Domain joined workstation
+- Kali Linux – Attacker machine
 
-## Environment Architecture
+Domain:
 
-On-Prem Infrastructure
+- soclab.local
 
-- DC01 – Domain Controller
-- SRV01 – Target Server
-- SOC.local Active Directory domain
-
-Cloud Integration
+### Cloud Integration
 
 - Azure Arc enabled server
 - Log Analytics Workspace
+- Azure Monitor Agent
 - Microsoft Sentinel SIEM
-- Azure Monitor Agent log forwarding
 
-This setup enables visibility from endpoint activity to cloud-based detection.
+This architecture enables hybrid visibility between on-prem systems and cloud-based security monitoring.
 
 ## Repository Structure
 
 ### 01 - Lab Setup
 
-Establishment of the Active Directory environment and baseline configuration used throughout the portfolio.
+Deployment of the Active Directory lab environment.
 
 Focus areas:
 
-- Domain deployment
-- Server configuration
-- Logging preparation
+- Domain configuration
+- System preparation
+- Logging baseline
 - SOC lab foundation
 
 ### 02 - Attack Chain Simulation
 
-Simulation of a complete attacker workflow inside the domain environment.
+Simulation of a realistic enterprise attack scenario.
 
-Attack stages demonstrated:
+Attack stages:
 
-1. Initial Access – SMB brute force authentication attempts
+1. Initial Access – SMB brute force attempts from Kali Linux
 2. Credential Compromise – Successful authentication
 3. Lateral Movement – SMB authentication to SRV01
 4. Privilege Escalation – Local administrator access
 5. Credential Dumping – LSASS memory extraction
 
-Security events analyzed primarily include:
+Primary security events analyzed:
 
-- Event ID 4625
-- Event ID 4624
-- Event ID 4688
+- Event ID 4625 – Failed Logon
+- Event ID 4624 – Successful Logon
+- Event ID 4688 – Process Creation
 
-This phase demonstrates attacker behavior from a defender visibility perspective.
+This phase demonstrates attacker activity from a defensive monitoring perspective.
 
 ### 03 - Cloud Integration
 
-Extension of on-premise telemetry into Azure.
+Extension of on-premise logging into Azure.
 
 Implemented components:
 
 - Azure Arc onboarding
 - Data Collection Rules
-- Windows Security log forwarding
+- Windows Security log ingestion
 - Microsoft Sentinel integration
 - Hybrid monitoring validation
 
-This phase transitions the lab into a hybrid SOC monitoring environment.
+Security telemetry from SRV01 is forwarded into the SIEM platform.
 
 ### 04 - Incident Investigation
 
@@ -90,41 +83,35 @@ SOC-style investigation of suspicious persistence activity.
 
 Investigation workflow:
 
-- Persistence detection
+- Scheduled task persistence detection
 - Process execution analysis
-- User authentication correlation
-- Event timeline reconstruction
+- Authentication correlation
+- Attack timeline reconstruction
 - MITRE ATT&CK mapping
 - Analyst conclusion
 
-Demonstrated investigative events:
+Investigated events include:
 
 - Event ID 4698 – Scheduled Task Creation
 - Event ID 4688 – Process Execution
-- Event ID 4624 – User Authentication
+- Event ID 4624 – Authentication Activity
 
-This phase represents practical Tier-1 SOC investigation methodology.
+This phase reflects practical Tier-1 SOC investigation methodology.
 
 ## Skills Demonstrated
 
 - Windows Security Log Analysis
-- Threat Detection and Investigation
 - Active Directory Security Monitoring
-- Attack Chain Understanding
+- Threat Detection and Investigation
+- Attack Chain Analysis
+- Incident Response Investigation
 - MITRE ATT&CK Mapping
-- SIEM Log Ingestion
 - Microsoft Sentinel Fundamentals
-- Incident Analysis Workflow
 - Hybrid SOC Monitoring
+- Log Correlation and Timeline Analysis
 
-## Detection Focus
+## Project Objective
 
-The primary objective of this portfolio is not offensive security, but detection visibility and investigation capability.
+The objective of this portfolio is to demonstrate practical SOC analyst capabilities through realistic attack simulations and evidence-based investigations.
 
-All attack simulations are performed to demonstrate how malicious activity appears from a SOC analyst perspective.
-
-## Project Goal
-
-The goal of this project is to demonstrate practical readiness for a SOC Analyst or Security Operations internship (LIA) through structured, evidence-based security investigations.
-
-The lab emphasizes understanding attacker techniques, log correlation, and defensive analysis rather than theoretical exercises.
+All offensive actions are performed solely to analyze detection visibility and defensive response from a SOC perspective.
