@@ -71,3 +71,11 @@ Verified Event IDs:
 ### Evidence
 
 ![4625 visible](screenshots/04-4625-visible.PNG)
+
+## Microsoft Sentinel Defender Portal Integration
+
+Microsoft Sentinel is accessed through the Microsoft Defender portal as part of Microsoft's unified SOC platform.
+
+### Evidence
+
+![defender portal sentinel](screenshots/05-defender-portal-sentinel.PNG)
