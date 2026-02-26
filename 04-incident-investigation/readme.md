@@ -48,3 +48,19 @@ This scheduled task executes PowerShell with suspicious parameters commonly asso
 Scheduled task successfully created on SRV01.
 
 ![Scheduled Task Created](screenshots/02-task-created.PNG)
+
+## Task Verification
+
+The scheduled task was verified to confirm persistence was successfully
+established on the system.
+
+Command used:  
+schtasks /query | findstr Update
+
+
+## Evidence
+
+Verification confirmed that the scheduled task WindowsUpdateCheck
+exists on the system and is configured for execution.
+
+![Scheduled Task Verification](screenshots/03-task-verification.PNG)
