@@ -1,5 +1,6 @@
 <- [Back to Portfolio Overview](../)  
-<- [02-attack-chain](../02-attack-chain/readme.md)
+<- [02-attack-chain](../02-attack-chain/readme.md)  
+[04-incident-investigation](../04-incident-investigation/readme.md) ->
 
 # Cloud Integration - Azure Arc and Microsoft Sentinel
 
