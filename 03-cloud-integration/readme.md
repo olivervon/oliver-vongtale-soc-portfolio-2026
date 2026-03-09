@@ -1,4 +1,4 @@
-<- [Back to Portfolio Overview](../)  
+<- [Back to Portfolio Overview](../readme.md)  
 <- [02-attack-chain](../02-attack-chain/readme.md)  
 [04-incident-investigation](../04-incident-investigation/readme.md) ->
 
