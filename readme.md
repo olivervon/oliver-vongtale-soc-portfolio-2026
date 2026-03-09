@@ -8,15 +8,15 @@ The project follows a structured SOC workflow from initial compromise to inciden
 
 ## Repository Navigation
 
-- [Lab Environment](#lab-environment)
-- [Environment Architecture](#environment-architecture)
+- Lab Environment
+- Environment Architecture
 - Repository Structure
   - [01 - Infrastructure](01-infrastructure/readme.md)
   - [02 - Attack Chain](02-attack-chain/readme.md)
   - [03 - Cloud Integration](03-cloud-integration/readme.md)
   - [04 - Incident Investigation](04-incident-investigation/readme.md)
-- [Skills Demonstrated](#skills-demonstrated)
-- [Project Objective](#project-objective)
+- Skills Demonstrated
+- Project Objective
 
 ## Lab Environment
 
